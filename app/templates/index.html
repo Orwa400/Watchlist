@@ -7,7 +7,7 @@
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
-<!-- Content block -->
+<!-- Content block 1 -->
 {% block content %}
 
         <!-- Popular movie section -->
@@ -26,14 +26,12 @@
             {{ macro.displayMovieList(now_showing)}}
         </ul> 
 
+        <div class="container">
+            <form>
+                <input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control">
+                <input type="submit" value="Submit" class="btnbtn-default">
+            </form>
+            
+        </div>
+
 {% endblock%}
-
-{% block content %}
-
-<div class="container">
-    <form>
-        <input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control">
-        <input type="submit" value="Submit" class="btnbtn-default">
-    </form>
-    
-</div>
