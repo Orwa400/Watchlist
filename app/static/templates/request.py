@@ -10,6 +10,11 @@ api_key = app.config['MOVIE_API_KEY']
 # Getting the movie base url
 base_url = 'https://api.themoviedb.org/3/movie/{}?api_key={}'
 
+def  configure_request(app):
+    global api_key,base_url
+    api_key = app.config['MOVIE_API_KEY']
+    base_url = app.config['MOVIE_API_BASE_URL']
+
 ...
 
 
