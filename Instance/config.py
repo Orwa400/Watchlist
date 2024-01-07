@@ -1,2 +1,2 @@
 MOVIE_API_KEY = '0c75a50825aeff597f5e898fc159052e'
-SECRET_KEY = '<flask WTF Secret Key>'
+SECRET_KEY = os.environ.get('SECRET_KEY')
